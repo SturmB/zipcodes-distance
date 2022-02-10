@@ -7,10 +7,12 @@
     "url": "https://github.com/SturmB/zipcodes-distance/issues"
   },
   "devDependencies": {
+    "@prettier/plugin-php": "^0.18.0",
     "axios": "^0.25",
     "laravel-mix": "^6.0.6",
     "lodash": "^4.17.19",
-    "postcss": "^8.1.14"
+    "postcss": "^8.1.14",
+    "prettier": "^2.5.1"
   },
   "directories": {
     "test": "tests"
