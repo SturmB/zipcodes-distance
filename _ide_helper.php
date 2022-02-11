@@ -16140,7 +16140,18 @@
      
 }
 
-        namespace Spatie\LaravelIgnition\Facades { 
+        namespace App\Helper { 
+            /**
+     * 
+     *
+     */ 
+        class Helper {
+         
+    }
+     
+}
+
+    namespace Spatie\LaravelIgnition\Facades { 
             /**
      * 
      *
@@ -20149,6 +20160,7 @@ namespace  {
             class URL extends \Illuminate\Support\Facades\URL {}
             class Validator extends \Illuminate\Support\Facades\Validator {}
             class View extends \Illuminate\Support\Facades\View {}
+            class Helper extends \App\Helper\Helper {}
             class Flare extends \Spatie\LaravelIgnition\Facades\Flare {}
      
 }
