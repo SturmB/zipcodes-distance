@@ -13,7 +13,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1 class="display-1">Zip Code Distance Calculator</h1>
+            <h1 class="display-1 mt-5 heading-center">Zip Code Distance Calculator</h1>
         </div>
     </div>
     <div class="row mt-5">
@@ -30,7 +30,7 @@
         <div class="col mb-3">
             <div class="card">
                 <div class="card-header">
-                    <h2 id="your-trip" class="card-title mt-2">Your Trip</h2>
+                    <h2 id="your-trip" class="card-title mt-2 heading-center">Your Trip</h2>
                 </div>
                 <div class="card-body">
                     <h4 class="card-text alert alert-primary">Total Distance: </h4>
