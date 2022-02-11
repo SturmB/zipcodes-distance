@@ -28,6 +28,7 @@ class ZipcodeSeeder extends Seeder
 
         // add each record to the posts table in DB
         foreach ($records as $key => $record) {
+            /** @noinspection PhpUndefinedMethodInspection */
             Zipcode::create([
                 "zip" => $record["zip"],
                 "latitude" => $record["latitude"],
