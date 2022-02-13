@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="row mt-5">
-        <div class="col mb-3">
+        <div class="col-md-6 mb-5">
             <label for="zip-input">
                 <h3>Please enter a ZIP Code to add to your trip</h3>
             </label>
@@ -27,7 +27,7 @@
             </div>
             <button class="btn btn-outline-danger" type="button">Start Over</button>
         </div>
-        <div class="col mb-3">
+        <div class="col-md-6 mb-5">
             <div class="card">
                 <div class="card-header">
                     <h2 id="your-trip" class="card-title mt-2 heading-center">Your Trip</h2>
