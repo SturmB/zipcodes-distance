@@ -1,3 +1,7 @@
+/**
+ * For browser refreshes or new visits, make sure to calculate distances
+ * if ZIP codes are in the session variable.
+ */
 $(() => {
     const allZips = JSON.parse(sessionStorage.getItem("zips")) ?? [];
     const distance = parseFloat(sessionStorage.getItem("distance"));
@@ -11,6 +15,11 @@ $(() => {
     }
 });
 
+/**
+ * Take an array of ZIP codes and calculate the distance between them.
+ *
+ * @param {string[]} zips
+ */
 const runAjax = (zips) => {
     $.ajax({
         type: "POST",
@@ -32,6 +41,10 @@ const runAjax = (zips) => {
     });
 };
 
+/**
+ * Moves the entered ZIP code to the list
+ * and runs the distance calculation on them.
+ */
 const getDistance = () => {
     // Set the CSRF token for AJAX use.
     $.ajaxSetup({
@@ -57,6 +70,9 @@ const getDistance = () => {
     zipInput.val("");
 };
 
+/**
+ * Clears all session variables, inputs, and displayed outputs.
+ */
 const clearSession = () => {
     sessionStorage.removeItem("zips");
     sessionStorage.removeItem("distance");

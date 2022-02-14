@@ -10,15 +10,23 @@ use Illuminate\Support\Facades\Response;
 class ZipcodeController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the single-page app.
      *
-     * @return View
+     * @return View The home view
      */
     public function index(): View
     {
         return view("home");
     }
 
+    /**
+     * Calculates the distance in kilometers between two ZIP codes
+     * using the Haversine formula and returns that distance.
+     *
+     * @param string $from The starting ZIP code
+     * @param string $to The ending ZIP code
+     * @return float The distance between those ZIP codes in km
+     */
     private function calculateDistance(string $from, string $to): float
     {
         // Initialize the earth's radius in km.
@@ -48,6 +56,13 @@ class ZipcodeController extends Controller
         return $angle * $earthRadius;
     }
 
+    /**
+     * AJAX function that takes an array of ZIP codes and returns the
+     * total distance between them.
+     *
+     * @param Request $request The AJAX request
+     * @return float The distance between all the ZIP codes
+     */
     public function getDistance(Request $request): float
     {
         // Initialize the total distance and get the ZIP codes.
