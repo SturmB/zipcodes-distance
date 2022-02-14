@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ZipcodeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('zipcodes');
-});
+Route::get("/", [ZipcodeController::class, "index"]);
+Route::post("/distance", [ZipcodeController::class, "getDistance"]);

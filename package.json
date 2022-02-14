@@ -6,6 +6,9 @@
     "bugs": {
         "url": "https://github.com/SturmB/zipcodes-distance/issues"
     },
+    "dependencies": {
+        "jquery": "^3.6.0"
+    },
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
         "@prettier/plugin-php": "^0.18.0",
