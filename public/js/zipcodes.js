@@ -20,6 +20,7 @@ const runAjax = (zips) => {
         },
         dataType: "json",
         success: (data) => {
+            // noinspection JSCheckFunctionSignatures
             $("#total-distance").html(
                 data.toLocaleString(undefined, { maximumFractionDigits: 2 })
             );
@@ -38,7 +39,8 @@ const getDistance = () => {
             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
         },
     });
-    const zip = $("#zip-input").val();
+    const zipInput = $("#zip-input");
+    const zip = zipInput.val();
 
     // Add the new ZIP to the list of all ZIPs.
     const allZips = JSON.parse(sessionStorage.getItem("zips")) ?? [];
@@ -50,6 +52,9 @@ const getDistance = () => {
 
     // Get the total distance between the ZIPs and display it.
     runAjax(allZips);
+
+    // Clear the input.
+    zipInput.val("");
 };
 
 const clearSession = () => {

@@ -9,14 +9,16 @@
         </div>
         <div class="row mt-5">
             <div class="col-md-6 mb-5">
-                <label class="h3" for="zip-input">
-                    Please enter a ZIP Code to add to your trip
-                </label>
-                <div class="input-group mb-3">
-                    <input id="zip-input" type="text" class="form-control">
-                    <button class="btn btn-primary" type="button" onclick="getDistance()">Submit</button>
-                </div>
-                <button class="btn btn-outline-danger" type="button" onclick="clearSession()">Start Over</button>
+                <form>
+                    <label class="h3" for="zip-input">
+                        Please enter a ZIP Code to add to your trip
+                    </label>
+                    <div class="input-group mb-3">
+                        <input id="zip-input" type="text" class="form-control">
+                        <button class="btn btn-primary" type="submit" onclick="getDistance()">Submit</button>
+                    </div>
+                    <button class="btn btn-outline-danger" type="button" onclick="clearSession()">Start Over</button>
+                </form>
             </div>
             <div class="col-md-6 mb-5">
                 <div class="card">
